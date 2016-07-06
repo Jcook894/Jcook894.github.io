@@ -30,7 +30,7 @@ var bio = {
   "skills" : [
     "HTML","CSS","JavaScript"
   ],
-  "biopic" : "images/Me.jpg"
+  "bioPic" : "pictures/profilepic.jpg"
 }
 
 
@@ -39,11 +39,14 @@ var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
 var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
 var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
-var formattedBioPic = HTMLbioPic.replace("%data%","bio.biopic");
+var formattedSkills = HTMLskills.replace("%data%",bio.skills);
+var formattedBioPic = HTMLbioPic.replace("%data%",bio.bioPic);
+
 
 $("#header").prepend(formattedBioPic);
 $("#header").append(formattedMobile);
 $("#header").append(formattedEmail);
 $("#header").append(formattedGithub);
 $("#header").append(formattedLocation);
+$("#header").append(formattedSkills);
 $("#header").append(formattedWelcome);
