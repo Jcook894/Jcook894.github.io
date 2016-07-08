@@ -16,7 +16,7 @@ $("#header").append(formattedRole);
 //
 ////////////////
 
-var bio = {
+ var bio = {
   "name" : "Julian Cook",
   "role" : "Web Developer",
   "contacts" : {
@@ -30,7 +30,7 @@ var bio = {
   "skills" : [
     "HTML","CSS","JavaScript"
   ],
-  "bioPic" : "pictures/profilepic.jpg"
+  "bioPic" : "pictures/fry.jpg"
 }
 
 
@@ -43,10 +43,57 @@ var formattedSkills = HTMLskills.replace("%data%",bio.skills);
 var formattedBioPic = HTMLbioPic.replace("%data%",bio.bioPic);
 
 
-$("#header").prepend(formattedBioPic);
-$("#header").append(formattedMobile);
-$("#header").append(formattedEmail);
-$("#header").append(formattedGithub);
+$("#header").append(formattedBioPic);
+$("#topContacts").append(formattedMobile);
+$("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedGithub);
 $("#header").append(formattedLocation);
 $("#header").append(formattedSkills);
 $("#header").append(formattedWelcome);
+
+///work
+//
+////////
+
+var work =
+{
+  "jobs" : [
+    {
+      "employer" : "Marco Polo",
+      "title" : "Waiter",
+      "location" : "East Hartford,CT",
+      "dates" : "2012 to present",
+      "description" : "Serves tables and cleans up after restaurant"
+
+    }
+
+  ]
+
+};
+var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs.employer);
+var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs.title);
+var formattedworkLocation = HTMLworkLocation.replace("%data%")
+$("#workExperience").append(formattedEmployer);
+
+
+var education =
+{
+  "schools" : [
+    {
+      "name" : "East Hartford Highschool",
+      "location" : "East Hartford",
+      "degree" : "Highschool diploma",
+      "dates" : "2008-2012",
+      "url" : "http://www.easthartford.org/page.cfm?p=8956",
+    }
+  ],
+  "onlineCourses" : [
+    {
+      "title": "frontend-nanodegree",
+      "school": "Udacity",
+      "dates" : "2015-currently enrolled",
+      "url" : "https://www.udacity.com/",
+
+    }
+  ],
+};
