@@ -80,7 +80,7 @@ $("#header").append(formattedWelcome);
 
 var work =
 {
-  "job" : [
+  "jobs" : [
     {
       "employer" : "Marco Polo",
       "title" : "Waiter",
@@ -99,19 +99,19 @@ function displayWork() {
 
 
 
-    for(jobs in work.job){
+    for(jobs in work.jobs){
     $("#workExperience").append(HTMLworkStart);
-    formattedEmployer = HTMLworkEmployer.replace("%data%",work.job[jobs].employer);
-    formattedTitle = HTMLworkTitle.replace("%data%",work.job[jobs].title);
+    formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[jobs].employer);
+    formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[jobs].title);
 
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
     $(".work-entry:last").append(formattedEmployerTitle);
 
-    formattedworkLocation = HTMLworkLocation.replace("%data%",work.job[jobs].location);
+    formattedworkLocation = HTMLworkLocation.replace("%data%",work.jobs[jobs].location);
     $(".work-entry:last").append(formattedworkLocation);
-    formattedworkDates = HTMLworkDates.replace("%data%",work.job[jobs].dates);
+    formattedworkDates = HTMLworkDates.replace("%data%",work.jobs[jobs].dates);
     $(".work-entry:last").append(formattedworkDates);
-    formattedworkDescrip = HTMLworkDescription.replace("%data%",work.job[jobs].description);
+    formattedworkDescrip = HTMLworkDescription.replace("%data%",work.jobs[jobs].description);
     $(".work-entry:last").append(formattedworkDescrip);
 
 
@@ -242,3 +242,6 @@ projects.display = function (){
 };
 
 projects.display();
+
+
+$("#mapDiv").append(googleMap);
