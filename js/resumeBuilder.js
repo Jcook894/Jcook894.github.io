@@ -48,14 +48,17 @@ var formattedName =
 var formattedMobile =
     HTMLmobile.replace("%data%", bio.contacts.mobile);
     $("#topContacts").append(formattedMobile);
+    $("#footerContacts").append(formattedMobile);
 
 var formattedEmail =
     HTMLemail.replace("%data%", bio.contacts.email);
     $("#topContacts").append(formattedEmail);
+    $("#footerContacts").append(formattedEmail);
 
 var formattedGithub =
     HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formattedGithub);
+    $("#footerContacts").append(formattedGithub);
 
 var formattedPic =
     HTMLbioPic.replace("%data%", bio.bioPic);
