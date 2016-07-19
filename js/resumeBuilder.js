@@ -13,7 +13,7 @@
   "skills" : [
     "HTML","CSS","JavaScript"
   ],
-  "bioPic" : "pictures/fry.jpg"
+  "bioPic" : "pictures/profilepic.jpg"
 }
 
 $('#main').append(internationalizeButton);
@@ -37,18 +37,33 @@ var iName = inName($("#name").text()) || function(){};
 $('#name').html(iName);
 });
 });
+var formattedRole =
+    HTMLheaderRole.replace("%data%", bio.role);
+    $("#header").prepend(formattedRole);
 
+var formattedName =
+    HTMLheaderName.replace("%data%", bio.name);
+    $("#header").prepend(formattedName);
 
-var formattedName = HTMLheaderName.replace("%data%",bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
-var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
-var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
-var formattedWelcome = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
-var formattedSkill = HTMLskills.replace("%data%",bio.skills);
-var formattedBioPic = HTMLbioPic.replace("%data%",bio.bioPic);
+var formattedMobile =
+    HTMLmobile.replace("%data%", bio.contacts.mobile);
+    $("#topContacts").append(formattedMobile);
 
+var formattedEmail =
+    HTMLemail.replace("%data%", bio.contacts.email);
+    $("#topContacts").append(formattedEmail);
+
+var formattedGithub =
+    HTMLgithub.replace("%data%", bio.contacts.github);
+    $("#topContacts").append(formattedGithub);
+
+var formattedPic =
+    HTMLbioPic.replace("%data%", bio.bioPic);
+    $("#header").append(formattedPic);
+
+var formattedWelcomeMessage =
+    HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedWelcomeMessage);
 
 if(bio.skills.length > 0){
   $("#header").append(HTMLskillsStart);
@@ -65,14 +80,7 @@ if(bio.skills.length > 0){
 
 }
 
-$("#header").prepend(formattedName);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedBioPic);
-$("#topContacts").prepend(formattedMobile);
-$("#topContacts").prepend(formattedEmail);
-$("#topContacts").prepend(formattedGithub);
-$("#topContacts").prepend(formattedLocation);
-$("#header").append(formattedWelcome);
+
 
 ///work
 //
