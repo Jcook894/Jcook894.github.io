@@ -131,7 +131,7 @@ var education = {
         "location": "East Hartford",
         "degree": "Highschool diploma",
         "dates": "2008-2012",
-        "major": "General Studies",
+        "majors": "General Studies",
         "url": "http://www.easthartford.org/page.cfm?p=8956"
     }],
     "onlineCourses": [{
@@ -202,19 +202,21 @@ education.display();
 ////////////////////////////////
 
 var projects = {
-    "project": [{
+    "projects": [{
         "title": "Portfolio",
         "dates": "2016",
         "description": "Mockup Portfolio page for udacity project",
-        "images": "pictures/ProjectPort.jpg"
+      }],
+        "images":[ "pictures/ProjectPort.jpg"
+      ],
 
-    }],
+
 };
 
 
 projects.display = function() {
 
-    projects.project.forEach(function(project) {
+    projects.projects.forEach(function(project) {
 
         $('#projects').append(HTMLprojectStart);
 
@@ -224,11 +226,18 @@ projects.display = function() {
         $(".project-entry:last").append(formattedDates);
         var formattedDescript = HTMLprojectDescription.replace("%data%", project.description);
         $(".project-entry:last").append(formattedDescript);
-        var formattedImage = HTMLprojectImage.replace("%data%", project.images);
-        $(".project-entry:last").append(formattedImage);
 
     });
 
+    projects.images.forEach(function(img) {
+
+      $("#projects").append(HTMLprojectStart);
+      var formattedImage = HTMLprojectImage.replace("%data%",img);
+      $(".project-entry:last").append(formattedImage);
+
+
+    }
+  );
 
 };
 
