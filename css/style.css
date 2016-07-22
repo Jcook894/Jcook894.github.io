@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #1aa3ff;
   line-height: 48px;
   display: inline;
 }
@@ -34,7 +34,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #1aa3ff;
   line-height: 29px;
   padding: 10px;
 }
@@ -42,8 +42,9 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #1aa3ff;
   line-height: 22px;
+  text-decoration: underline;
 }
 
 h4 {
@@ -58,6 +59,11 @@ h3,
 h4,
 h5 {
   padding:10px 5%;
+
+}
+
+#projects {
+  background-color:  #dee6ed;
 
 }
 
@@ -79,28 +85,36 @@ h5 {
 
 }
 
+.orange.center-text {
+  background-color:#ff471a; 
+}
+
 p {
   font-size: 14px;
-  color: #333;
+  color: #1aa3ff;
   line-height: 21px;
 }
 
 a {
-  color: #1199c3;
+  color: #ff471a;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
+em{
+  text-decoration: underline;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color:  #ff471a;
   line-height: 28px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #1aa3ff;
   display: none;
 }
 
@@ -109,22 +123,26 @@ a {
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #1aa3ff;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #ff471a;
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color:  #dee6ed;
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
   background-color: #4a4a4a;
+}
+
+#mapDiv{
+   background-color: #dee6ed;
 }
 
 /* TODO: Replace with image later */
@@ -142,6 +160,7 @@ a {
 }
 
 .center-content {
+  background-color: #595959;
   padding: 2.5% 5%;
 }
 
