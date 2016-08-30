@@ -205,9 +205,16 @@ var projects = {
     "projects": [{
         "title": "Portfolio",
         "dates": "2016",
-        "description": "Mockup Portfolio page for udacity project",
+        "description": "Mockup Portfolio page for udacity project ",
       }],
-        "images":[ "pictures/ProjectPort.jpg"
+    "project1":[{
+      "title" : "Frogger-style arcade game",
+      "dates" : "2016",
+      "description" : "A frogger-style game made using HTML5 and JavaScript",
+    }],
+        "images":[ "pictures/ProjectPort.jpg",
+      ],
+        "image1":["pictures/ArcadeGame.png",
       ],
 
 
@@ -236,8 +243,27 @@ projects.display = function() {
       $(".project-entry:last").append(formattedImage);
 
 
-    }
-  );
+    });
+    projects.project1.forEach(function(project) {
+        $('#projects').append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+        $(".project-entry:last").append(formattedTitle);
+        var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+        $(".project-entry:last").append(formattedDates);
+        var formattedDescript = HTMLprojectDescription.replace("%data%", project.description);
+        $(".project-entry:last").append(formattedDescript);
+
+    });
+
+    projects.image1.forEach(function(img) {
+
+      $("#projects").append(HTMLprojectStart);
+      var formattedImage = HTMLprojectImage.replace("%data%",img);
+      $(".project-entry:last").append(formattedImage);
+
+
+    });
 
 };
 
