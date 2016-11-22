@@ -1,4 +1,4 @@
-
+<!-- model  -->
 var bio = {
     "name": "Julian Cook",
     "role": "Web Developer",
@@ -9,13 +9,74 @@ var bio = {
         "location": "Hartford,CT"
 
     },
-    "welcomeMessage": "Welcome to the Resume!",
+    "welcomeMessage": "Welcome to my Resume!",
     "skills": [
         "HTML", "CSS", "JavaScript"
     ],
     "biopic": "pictures/fry.jpg"
 };
 
+//work info.
+var work = {
+    "jobs": [{
+            "employer": "Marco Polo",
+            "title": "Waiter",
+            "location": "East Hartford,CT",
+            "dates": "2012 to present",
+            "description": "Serves tables and cleans up after restaurant"
+
+        }
+
+    ]
+};
+
+// Education Info.
+var education = {
+    "schools": [{
+        "name": "East Hartford Highschool",
+        "location": "East Hartford",
+        "degree": "Highschool diploma",
+        "dates": "2008-2012",
+        "majors": "General Studies",
+        "url": "http://www.easthartford.org/page.cfm?p=8956"
+    }],
+    "onlineCourses": [{
+        "title": "Frontend-Nanodegree",
+        "school": "Udacity",
+        "dates": "Sept, 2015 - Nov, 2016",
+        "url": "https://www.udacity.com/"
+
+    }],
+};
+
+var projects = {
+    "projects": [{
+        "title": "Portfolio",
+        "dates": "2016",
+        "description": "Mockup Portfolio page for udacity project ",
+      }],
+    "project1":[{
+      "title" : "Frogger-style arcade game",
+      "dates" : "2016",
+      "description" : "A frogger-style game made using HTML5 and JavaScript",
+    }],
+    "project2":[{
+        "title": "Website Performance Optimization",
+        "dates": "2016",
+        "description" : "Took a very janky web application and optimizied it to run at 60fps with a pagespeed of 90",
+    }],
+        "images":[ "pictures/ProjectPort.jpg",
+      ],
+        "image1":["pictures/Arcade-game.png",
+      ],
+        "image2":["pictures/web_opt.png",
+      ],
+
+
+};
+
+
+//
 
 bio.display = function() {
 
@@ -78,22 +139,9 @@ bio.display = function() {
 bio.display();
 
 
-///work
-//
-/////////////////////
+//// Work
 
-var work = {
-    "jobs": [{
-            "employer": "Marco Polo",
-            "title": "Waiter",
-            "location": "East Hartford,CT",
-            "dates": "2012 to present",
-            "description": "Serves tables and cleans up after restaurant"
 
-        }
-
-    ]
-};
 work.display = function() {
 
     work.jobs.forEach(function(job) {
@@ -118,30 +166,6 @@ work.display = function() {
 };
 work.display();
 
-//education
-//
-///////////////////////////////
-
-
-
-
-var education = {
-    "schools": [{
-        "name": "East Hartford Highschool",
-        "location": "East Hartford",
-        "degree": "Highschool diploma",
-        "dates": "2008-2012",
-        "majors": "General Studies",
-        "url": "http://www.easthartford.org/page.cfm?p=8956"
-    }],
-    "onlineCourses": [{
-        "title": "Frontend-Nanodegree",
-        "school": "Udacity",
-        "dates": "2015-currently enrolled",
-        "url": "https://www.udacity.com/"
-
-    }],
-};
 
 
 education.display = function() {
@@ -164,7 +188,7 @@ education.display = function() {
         $(".education-entry:last").prepend(formattedschoolDegree);
         var formattedDates = HTMLschoolDates.replace("%data%", school.dates);
         $(".education-entry:last").append(formattedDates);
-        var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
+        var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
         $(".education-entry:last").append(formattedMajor);
 
 
@@ -201,24 +225,6 @@ education.display();
 //
 ////////////////////////////////
 
-var projects = {
-    "projects": [{
-        "title": "Portfolio",
-        "dates": "2016",
-        "description": "Mockup Portfolio page for udacity project ",
-      }],
-    "project1":[{
-      "title" : "Frogger-style arcade game",
-      "dates" : "2016",
-      "description" : "A frogger-style game made using HTML5 and JavaScript",
-    }],
-        "images":[ "pictures/ProjectPort.jpg",
-      ],
-        "image1":["pictures/ArcadeGame.png",
-      ],
-
-
-};
 
 
 projects.display = function() {
@@ -264,6 +270,27 @@ projects.display = function() {
 
 
     });
+    projects.project2.forEach(function(project) {
+        $('#projects').append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+        $(".project-entry:last").append(formattedTitle);
+        var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+        $(".project-entry:last").append(formattedDates);
+        var formattedDescript = HTMLprojectDescription.replace("%data%", project.description);
+        $(".project-entry:last").append(formattedDescript);
+
+    });
+
+    projects.image2.forEach(function(img) {
+
+      $("#projects").append(HTMLprojectStart);
+      var formattedImage = HTMLprojectImage.replace("%data%",img);
+      $(".project-entry:last").append(formattedImage);
+
+
+    });
+
 
 };
 
