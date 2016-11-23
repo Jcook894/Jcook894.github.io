@@ -6,6 +6,7 @@ var bio = {
         "mobile": "860-614-9115",
         "email": "jcook894@icloud.com",
         "github": "https://github.com/Jcook894",
+        "linkedin" : "https://www.linkedin.com/in/julian-cook-a89019127",
         "location": "Hartford,CT"
 
     },
@@ -89,8 +90,6 @@ var projects = {
 
 };
 
-
-
 bio.display = function() {
 
 
@@ -109,6 +108,8 @@ bio.display = function() {
     var formattedGithub =
         HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts,#footerContacts").append(formattedGithub);
+    var formattedLinkedin = HTMLtwitter.replace('%data%', bio.contacts.linkedin);
+    $('#topContacts, #footerContacts').append(formattedLinkedin);
     var formattedPic =
         HTMLbioPic.replace("%data%", bio.biopic);
     $("#header").append(formattedPic);
