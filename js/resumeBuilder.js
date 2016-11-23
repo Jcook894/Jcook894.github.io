@@ -53,23 +53,37 @@ var projects = {
     "projects": [{
         "title": "Portfolio",
         "dates": "2016",
-        "description": "Mockup Portfolio page for udacity project ",
+        "description": "Mockup Portfolio page for udacity project. ",
       }],
     "project1":[{
       "title" : "Frogger-style arcade game",
       "dates" : "2016",
-      "description" : "A frogger-style game made using HTML5 and JavaScript",
+      "description" : "A frogger-style game made using HTML5 and JavaScript. ",
     }],
     "project2":[{
         "title": "Website Performance Optimization",
         "dates": "2016",
-        "description" : "Took a very janky web application and optimizied it to run at 60fps with a pagespeed of 90",
+        "description" : "Took a very janky web application and optimizied it to run at 60fps with a pagespeed of 90. ",
+    }],
+    "project3":[{
+      "title": "Neighborhood Map projects",
+      "dates": "2016",
+      "description": "Used a variety of API's to create a map application. "
+    }],
+    "project4":[{
+      "title": "Using Jasmine to test a web app",
+      "dates": "2016",
+      "description": "Used the jasmine to test the functionality of a web application. "
     }],
         "images":[ "pictures/ProjectPort.jpg",
       ],
         "image1":["pictures/Arcade-game.png",
       ],
         "image2":["pictures/web_opt.png",
+      ],
+        "image3":["pictures/Neighborhood.png",
+      ],
+        "image4":["pictures/Jasmine_proj.png",
       ],
 
 
@@ -290,6 +304,49 @@ projects.display = function() {
 
 
     });
+
+    projects.project3.forEach(function(project) {
+        $('#projects').append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+        $(".project-entry:last").append(formattedTitle);
+        var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+        $(".project-entry:last").append(formattedDates);
+        var formattedDescript = HTMLprojectDescription.replace("%data%", project.description);
+        $(".project-entry:last").append(formattedDescript);
+
+    });
+
+    projects.image3.forEach(function(img) {
+
+      $("#projects").append(HTMLprojectStart);
+      var formattedImage = HTMLprojectImage.replace("%data%",img);
+      $(".project-entry:last").append(formattedImage);
+
+
+    });
+
+    projects.project4.forEach(function(project) {
+        $('#projects').append(HTMLprojectStart);
+
+        var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+        $(".project-entry:last").append(formattedTitle);
+        var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+        $(".project-entry:last").append(formattedDates);
+        var formattedDescript = HTMLprojectDescription.replace("%data%", project.description);
+        $(".project-entry:last").append(formattedDescript);
+
+    });
+
+    projects.image4.forEach(function(img) {
+
+      $("#projects").append(HTMLprojectStart);
+      var formattedImage = HTMLprojectImage.replace("%data%",img);
+      $(".project-entry:last").append(formattedImage);
+
+
+    });
+
 
 
 };
