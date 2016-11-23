@@ -1,4 +1,4 @@
-<!-- model  -->
+
 var bio = {
     "name": "Julian Cook",
     "role": "Web Developer",
@@ -71,7 +71,7 @@ var projects = {
       "description": "Used a variety of API's to create a map application. "
     }],
     "project4":[{
-      "title": "Using Jasmine to test a web app",
+      "title": "Using testing frameworks",
       "dates": "2016",
       "description": "Used the jasmine to test the functionality of a web application. "
     }],
@@ -84,13 +84,12 @@ var projects = {
         "image3":["pictures/Neighborhood.png",
       ],
         "image4":["pictures/Jasmine_proj.png",
-      ],
+      ]
 
 
 };
 
 
-//
 
 bio.display = function() {
 

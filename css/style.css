@@ -86,7 +86,7 @@ h5 {
 }
 
 .orange.center-text {
-  background-color:#ff471a; 
+  background-color:#ff471a;
 }
 
 p {
@@ -223,6 +223,10 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+}
+
+.headers{
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 750px) {
