@@ -1,13 +1,13 @@
 
 var bio = {
     "name": "Julian Cook",
-    "role": "Web Developer",
+    "role": "Front End Developer",
     "contacts": {
         "mobile": "860-614-9115",
         "email": "jcook894@icloud.com",
         "github": "https://github.com/Jcook894",
         "linkedin" : "https://www.linkedin.com/in/julian-cook-a89019127",
-        "location": "Hartford,CT"
+        "location": "Hartford, CT"
 
     },
     "welcomeMessage": "Welcome to my Resume!",
@@ -127,7 +127,6 @@ bio.display = function() {
         return firstName + " " + lastName;
     }
 
-    inName(bio.name);
 
 
     if (bio.skills.length > 0) {
@@ -138,15 +137,10 @@ bio.display = function() {
         }
     }
 
-    $(document).ready(function() {
-        $('button').click(function() {
-            var iName = inName($("#name").text()) || function() {};
-            $('#name').html(iName);
-        });
-    });
 
     $('#main').append(internationalizeButton);
 
+inName(bio.name);
 
 };
 
