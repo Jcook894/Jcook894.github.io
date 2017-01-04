@@ -128,7 +128,6 @@ bio.display = function() {
         }
     }
 
-
 };
 
 bio.display();
