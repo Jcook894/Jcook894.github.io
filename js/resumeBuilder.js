@@ -118,15 +118,6 @@ bio.display = function() {
     $("#header").append(formattedWelcomeMessage);
 
 
-    function inName(intNames) {
-
-        intNames = intNames.trim().split(" ");
-        var firstName = intNames[0][0].toUpperCase() + intNames[0].slice(1).toLowerCase();
-        var lastName = intNames[1].toUpperCase();
-        console.log($("#name").text());
-        return firstName + " " + lastName;
-    }
-
 
 
     if (bio.skills.length > 0) {
@@ -137,10 +128,6 @@ bio.display = function() {
         }
     }
 
-
-    $('#main').append(internationalizeButton);
-
-inName(bio.name);
 
 };
 
