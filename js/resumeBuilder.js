@@ -128,6 +128,7 @@ bio.display = function() {
         }
     }
 
+
 };
 
 bio.display();
@@ -324,10 +325,7 @@ projects.display = function() {
       var formattedImage = HTMLprojectImage.replace("%data%",img);
       $(".project-entry:last").append(formattedImage);
 
-
     });
-
-
 
 };
 
