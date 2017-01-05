@@ -76,7 +76,7 @@ var projects = {
       "dates": "2016",
       "description": "Used the jasmine to test the functionality of a web application. "
     }],
-        "images":[ "pictures/ProjectPort.jpg",
+        "images":[ "pictures/ProjectPort.png",
       ],
         "image1":["pictures/Arcade-game.png",
       ],
@@ -143,7 +143,6 @@ work.display = function() {
 
         console.log(job);
         $("#workExperience").append(HTMLworkStart);
-
 
         formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
         formattedTitle = HTMLworkTitle.replace("%data%", job.title);
@@ -245,6 +244,7 @@ projects.display = function() {
 
 
     });
+
     projects.project1.forEach(function(project) {
         $('#projects').append(HTMLprojectStart);
 
