@@ -112,7 +112,7 @@ bio.display = function() {
     $('#topContacts, #footerContacts').append(formattedLinkedin);
     var formattedPic =
         HTMLbioPic.replace("%data%", bio.biopic);
-    $("#header").append(formattedPic);
+    $("#header").prepend(formattedPic);
     var formattedWelcomeMessage =
         HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedWelcomeMessage);
