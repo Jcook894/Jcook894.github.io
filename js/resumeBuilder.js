@@ -10,9 +10,9 @@ var bio = {
         "location": "Hartford, CT"
 
     },
-    "welcomeMessage": "Welcome to my Resume!",
+    "welcomeMessage": "A self-motivated Front-End web developer with a passion for code!",
     "skills": [
-        "HTML", "CSS", "JavaScript"
+        "HTML", "CSS", "JavaScript", "jQuery", "Knockout.js", "Bootstrap", "Jasmine"
     ],
     "biopic": "pictures/fry.jpg"
 };
