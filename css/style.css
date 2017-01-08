@@ -12,7 +12,7 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Roboto", sans-serif;
-  color: #ffffff;
+  color: black;
 }
 .row{
   background-color: #dee6ed;
@@ -72,7 +72,6 @@ h5 {
   background-color:  #dee6ed;
 
 }
-
 
 .date-text {
   font-style: italic;
@@ -233,10 +232,11 @@ span {
 }
 
 .headers{
-  text-decoration: underline;
+  border-bottom: 3px solid;
+  padding: 1px;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1000px) {
   #skills-h3,
   .biopic {
     display: block;
