@@ -137,7 +137,7 @@ bio.display();
 //// Work
 
 
-work.display = function() {
+work.display = function() {  
 
     work.jobs.forEach(function(job) {
 

@@ -232,8 +232,10 @@ span {
 }
 
 .headers{
-  border-bottom: 3px solid;
+  border-bottom:  3px solid;
+  border-color: #FFFFFF;
   padding: 1px;
+  width: inherit;
 }
 
 @media only screen and (min-width: 1000px) {
