@@ -14,7 +14,7 @@ var bio = {
     "skills": [
         "HTML", "CSS", "JavaScript", "jQuery", "Knockout.js", "Bootstrap", "Jasmine"
     ],
-    "biopic": "pictures/fry.jpg"
+    "biopic": "pictures/myPic.jpg"
 };
 
 //work info.
@@ -137,7 +137,7 @@ bio.display();
 //// Work
 
 
-work.display = function() {  
+work.display = function() {
 
     work.jobs.forEach(function(job) {
 
